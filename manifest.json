@@ -1,0 +1,30 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+ <section class="container">
+    <div class="slider-wrapper">
+  <div class="slider">
+     <img id="slide-1" src="https://img1.wsimg.com/isteam/ip/95d3bb28-6346-4b58-8de8-6deabf408a3c/309019628_664951175095272_4392030288218485336_.jpg/:/cr=t:0%25,l:10.79%25,w:73.93%25,h:100%25/rs=w:1023,h:769"/>
+  </div></section>
