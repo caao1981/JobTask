@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Homepage with sliders</title>
+          <style>
+            .slider-container {
+              width: 100%;
+              overflow: hidden;
+            }
+            
+            .slider {
+              display: flex;
+              transition: transform 0.5s ease;
+            }
+            
+            .slide {
+              flex: 0 0 100%;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide"><img src="https://img.freepik.com/free-psd/psd-side-view-realistic-box-truck_1409-3699.jpg" alt="Image 1"></div>
+              <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+              <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+            </div>
+          </div>
+        
+          <script>
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+        
+            function showSlide(index) {
+              slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${100 * (i - index)}%)`;
+              });
+            }
+        
+            function nextSlide() {
+              currentIndex = (currentIndex + 1) % totalSlides;
+              showSlide(currentIndex);
+            }
+        
+            setInterval(nextSlide, 3000); // Change slide every 3 seconds
+          </script>
+        </body>
+        </html>       
