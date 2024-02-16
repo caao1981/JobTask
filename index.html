@@ -1,51 +1,57 @@
 <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Homepage with sliders</title>
-          <style>
-            .slider-container {
-              width: 100%;
-              overflow: hidden;
-            }
-            
-            .slider {
-              display: flex;
-              transition: transform 0.5s ease;
-            }
-            
-            .slide {
-              flex: 0 0 100%;
-            }
-          </style>
-        </head>
-        <body>
-          <div class="slider-container">
-            <div class="slider">
-              <div class="slide"><img src="https://img.freepik.com/free-psd/psd-side-view-realistic-box-truck_1409-3699.jpg" alt="Image 1"></div>
-              <div class="slide"><img src="https://cdn.centraljersey.com/wp-content/uploads/sites/23/2021/05/DSC_0725-scaled.jpg" alt="Image 2"></div>
-              <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
-            </div>
-          </div>
-        
-          <script>
-            let currentIndex = 0;
-            const slides = document.querySelectorAll('.slide');
-            const totalSlides = slides.length;
-        
-            function showSlide(index) {
-              slides.forEach((slide, i) => {
-                slide.style.transform = `translateX(${100 * (i - index)}%)`;
-              });
-            }
-        
-            function nextSlide() {
-              currentIndex = (currentIndex + 1) % totalSlides;
-              showSlide(currentIndex);
-            }
-        
-            setInterval(nextSlide, 3000); // Change slide every 3 seconds
-          </script>
-        </body>
-        </html>       
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#register">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h1>Welcome to Our Website</h1>
+      <div class="slider">
+        <!-- Add your slider content here -->
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>This is where you can write about your company or organization.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us using the following contact information:</p>
+      <p>Email: example@example.com</p>
+      <p>Phone: 123-456-7890</p>
+    </section>
+
+    <section id="login">
+      <h2>Login</h2>
+      <!-- Add your login form here -->
+    </section>
+
+    <section id="register">
+      <h2>Register</h2>
+      <!-- Add your register form here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
