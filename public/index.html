@@ -1,51 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Slider</title>
-  <style>
-    .slider-container {
-      width: 100%;
-      overflow: hidden;
-    }
-    
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-    
-    .slide {
-      flex: 0 0 100%;
-    }
-  </style>
-</head>
-<body>
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slide"><img src="https://img1.wsimg.com/isteam/ip/95d3bb28-6346-4b58-8de8-6deabf408a3c/309019628_664951175095272_4392030288218485336_.jpg/:/cr=t:0%25,l:10.79%25,w:73.93%25,h:100%25/rs=w:1023,h:769" alt="Image 1"></div>
-      <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
-      <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
-    </div>
-  </div>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using @vitejs/plugin-react"
+    />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json" />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-  <script>
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${100 * (i - index)}%)`;
-      });
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      showSlide(currentIndex);
-    }
-
-    setInterval(nextSlide, 3000); // Change slide every 3 seconds
-  </script>
-</body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+  <script type="module" src="/src/index.jsx"></script>
 </html>
