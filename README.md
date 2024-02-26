@@ -1,4 +1,4 @@
-# Your site is being reviewed in "GoDaddy" it will be reviewed within 48hours
+# Your site is being reviewed in "GoDaddy" and will be reviewed within 48hours
 
 
 ## Available Scripts
