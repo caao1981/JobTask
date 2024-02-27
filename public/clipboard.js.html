@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clipboard Access</title>
+</head>
+<body>
+
+<button onclick="readClipboard()">Read from Clipboard</button>
+<div id="clipboardContent"></div>
+
+<script>
+function readClipboard() {
+    navigator.clipboard.readText()
+        .then(text => {
+            document.getElementById('clipboardContent').innerText = text;
+        })
+        .catch(err => {
+            console.error('Failed to read clipboard contents: ', err);
+        });
+}
+</script>
+
+</body>
+</html>
